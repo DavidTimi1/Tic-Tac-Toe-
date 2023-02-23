@@ -1,0 +1,198 @@
+header{
+    font-variant: small-caps;
+    font-size: 50px;
+    text-align: center;
+}
+
+body{
+    background-color: grey;
+}
+/* body during the modals */
+.game{
+    background-color: lightblue;
+    text-align: center;    
+    width: 100%;
+    display : none;
+}
+.modal-container{
+    background-image: url("tttimg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 8;
+    top: 0;
+    left: 0;
+    height: 100vh;
+}
+.play-modal,
+.reg-modal{
+    height: 55%;
+    width : 40%;
+    z-index: -10;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    background-color: transparent;
+    text-align:center;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 1px #c1c1c1;
+    transition: all 0.5s ease;
+    display: none;
+}
+.winner-overlay,
+.verify-overlay,
+.draw-overlay{
+    background-color: transparent;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 40%;
+    text-align: center;
+    display: none;
+    z-index: -10;
+}
+.game-blur{
+    filter: blur(5px);
+}
+.hide-cont{
+    z-index: -8;
+    display: none;
+}
+.open-modal{
+    display: block;
+    z-index: 10;
+}
+
+.winner-overlay h2,
+.winner-overlay h3,
+.draw-overlay h2,
+header,
+.verify-overlay h3,
+.play-modal h2{
+    font-size: 60px;
+    text-shadow: 3px 3px 5px green;
+}
+
+span{
+    color: green;
+    text-shadow: 3px 3px 5px black;
+    text-transform: uppercase;
+}
+
+.player1, 
+.player2{
+    text-align: center;
+}
+
+button{
+    margin-right: 5px;
+    color: white;
+    background-color: green;
+    border-radius: 20px;
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 2px solid white;
+    box-shadow: 3px 3px 5px 1px black;
+}
+button:hover {
+    animation : resize 100ms ease-in-out forwards;
+}
+@keyframes resize{
+    0% { font-size : 30px;
+        border-radius: 20px;
+        box-shadow: 3px 3px 3px 1px black;}
+    30% {box-shadow: 3px 3px 5px 5px black;}
+    60% {box-shadow: 3px 3px 7px 5px black;}
+    100% { font-size : 50px;
+        border-radius: 30px;
+        box-shadow: 3px 3px 10px 5px black;;}
+}
+h2,h3{
+    margin-bottom: 10px;
+    font-family:'Times New Roman', Times, serif;
+    font-variant: small-caps;
+    margin-top: 20px;
+    position: relative;
+    font-size: 30px;
+}
+h2{
+    font-weight: bolder;
+}
+h3{
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+}
+input{
+    padding: 5px;
+    font-size: larger;
+    margin-bottom: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 0px;
+}
+#reg-error{
+    color: red;
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+tr{
+    text-align: center;
+    height: 180px;
+    width: 180px;
+}
+td{
+    background-color: transparent;
+    border: 3px solid black;
+    font-size: 40px;
+    height: 175px;
+    width: 60px;
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.top {
+    border-top: none;
+}
+.bottom{
+    border-bottom: none;
+}
+.left{
+    border-left: none;
+}
+.right{
+    border-right: none;
+}
+.winstreak{
+    background-color: green;
+}
+#draw{
+    color: red;
+}
+#no{
+    background-color: red;
+}
+@media screen and (max-width: 800px){
+    .game{
+        width: 100%;
+        height: 100%;
+    }
+}
+.visible{
+    display : block;
+}

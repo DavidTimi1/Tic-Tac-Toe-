@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X and O</title>
+    <link rel="stylesheet" href="xando.css">
+</head>
+<body>
+    <div class="modal-container">
+        <div class="play-modal">
+            <h2>X and O</br> <span>(Tic Tac Toe)</span></h2>
+            <button id="play-but" onclick="playGame()">Play</button>
+        </div>
+
+
+    <div class="reg-modal" id="register">
+        <h2>Register Players</h2>
+        <div id="reg-error"></div>
+        <div class="player1">
+            <h3>Enter Player 1 Name</h3>
+            <input type="text" placeholder="player 1 name" id="p1" />
+        </div>
+        <div class="player2">
+            <h3>Enter Player 2 Name</h3>
+            <input type="text" placeholder="player 2 name" id="p2"/>
+        </div>
+        <button id="start-game" onclick="register()">Start Game</button>
+        </div>
+    </div>
+    
+
+    <div class="game">
+        <header class="header">X and O</header>
+        <div class="table-container">
+            <table class="gameboard" id="table">
+            <tr>
+                <td id="0" class="top left " onclick="play(0)"></td>
+                <td id="1" class="top" onclick="play(1)"></td>
+                <td id="2" class="top right" onclick="play(2)"></td>
+            </tr>
+            <tr>
+                <td id="3" class="left" onclick="play(3)"></td>
+                <td id="4" onclick="play(4)"></td>
+                <td id="5" class="right" onclick="play(5)"></td>
+            </tr>
+            <tr>
+                <td id="6" class="bottom left" onclick="play(6)"></td>
+                <td id="7" class="bottom" onclick="play(7)"></td>
+                <td id="8" class="bottom right" onclick="play(8)"></td>
+            </tr>
+        </table>
+        </div>
+        <div class="button">
+             <button id="restart" onclick="verify()">Restart Game</button>
+        <button id="re-register1" onclick="newGame()"> New Game </button>
+ 
+        </div>
+          </div>
+
+    <div class="winner-overlay">
+        <h2><span id="winner-name1"></span> has WON !! </h2>
+        <h3>Congratulations <span id="winner-name2"></span> !!</h3>
+        <button id="replay1" onclick="playAgain()"> Play Again </button>
+        <button id="re-register2" onclick="newGame()"> New Game </button>
+    </div>
+    <div class="draw-overlay">
+        <h2>This game has ended in a <span id="draw">DRAW</span> </h2>
+        <button id="replay2" onclick="playAgain()"> Play Again </button>
+        <button id="re-register3" onclick="newGame()">New Game</button>
+    </div>
+    <div class="verify-overlay">
+        <h3>Are you sure you want to continue?
+            <p>
+                This would delete current game progress.
+            </p>
+        </h3>
+            <button id="yes" onclick="playAgain()">YES</button>
+            <button id="no" onclick="remove()">NO</button>
+    </div>
+
+
+    
+</body>
+<script src="xando.js"></script>
+</html>
