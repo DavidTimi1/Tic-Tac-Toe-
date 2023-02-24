@@ -143,6 +143,7 @@ function  winningCheck(){
 }
 // if there is a winner, end the game
 function endGame(){
+   optionsHide("true");
    // display the winner
    winnerOverlay.classList.add("open-modal");
    game.classList.add("game-blur");
@@ -156,6 +157,8 @@ function endGame(){
 
 // to change player names and play again
 function newGame(){
+   // re-enable the in-game options
+   optionsHide("false");
    // hide the gameboard and victor messages
    if( drawOverlay.classList.contains("open-modal") ){
       drawOverlay.classList.remove("open-modal");
@@ -176,6 +179,8 @@ function newGame(){
 
 // prompted message asking whether to quit
 function verify(){
+   // disable the in-game options
+   optionsHide("true");
    // if it occured at the end of the game, do nothing
    if( drawOverlay.classList.contains("open-modal") || winnerOverlay.classList.contains("open-modal") ){
    }
@@ -188,6 +193,8 @@ function verify(){
 }
 // if the game runs out of moves and ends in a draw
 function draw(){
+   // disable the in-game options
+   optionsHide("true");
    if(!winnerOverlay.classList.contains("open-modal") ){
    drawOverlay.classList.add("open-modal");
    game.classList.add("game-blur");
@@ -209,6 +216,8 @@ function playAgain(){
       verifyOverlay.classList.remove("open-modal");
    }
 
+   // re-enable the in-game options
+   optionsHide("false");
    game.classList.remove("game-blur");
 
    // reset the game board
@@ -217,6 +226,8 @@ function playAgain(){
 }
 
 function remove(){
+   // re-enable the in-game options
+   optionsHide("false");
    verifyOverlay.classList.remove("open-modal");
    game.classList.remove("game-blur");
 }
@@ -238,6 +249,17 @@ function clearBoard(){
    }
    // reset turns
    turn = 0; 
+}
+
+let optionsHide = function(bool){
+   let j = eval(bool);
+   if (j){
+      document.getElementById("restart").style.display = "none";
+      document.getElementById("re-register1").style.display = "none";
+   } else {
+      document.getElementById("restart").style.display = "block";
+      document.getElementById("re-register1").style.display = "block";
+   }
 }
 
 
