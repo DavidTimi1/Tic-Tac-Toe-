@@ -2,7 +2,9 @@
 
 This is a simple 2-player Tic-Tac-Toe game implemented as a web page.
 
-#### [Click to Play](https://rawcdn.githack.com/DavidTimi1/Tic-Tac-Toe-/77872c8f0c1680db2f3448aa8afdaaf247bcb06d/xando.html)
+# Play
+
+[Click to Play](https://rawcdn.githack.com/DavidTimi1/Tic-Tac-Toe-/77872c8f0c1680db2f3448aa8afdaaf247bcb06d/xando.html)
 
 ## Features
 
