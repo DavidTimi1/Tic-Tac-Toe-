@@ -28,7 +28,7 @@ This is a simple 2-player Tic-Tac-Toe game implemented as a web page.
    ```sh
    git clone https://github.com/DavidTimi1/Tic-Tac-Toe-.git
    ```
-2. Open `index.html` in your web browser to start playing.
+2. Open `xando.html` in your web browser to start playing.
 
 ## License
 
