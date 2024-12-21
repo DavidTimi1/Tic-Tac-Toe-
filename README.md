@@ -38,6 +38,3 @@ This is a simple 2-player Tic-Tac-Toe game implemented as a web page.
 
 This project is licensed under the MIT License.
 
----
-
-Feel free to customize this README further based on your specific project details.
